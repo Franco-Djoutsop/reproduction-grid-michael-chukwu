@@ -10,9 +10,7 @@ body{
     margin: 0 auto;
     font-family: "Barlow Semi Condensed", sans-serif;
     background-color: hsl(210, 46%, 95%);
-    overflow-x: hidden;
-    overflow-y: scroll;
-    font-size: 1rem;
+    font-size: 13px;
     font-weight: 400;
     line-height: 1.5;
     color: #212529;
@@ -27,6 +25,7 @@ body{
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-gap: 20px;
+    color: hsl(0, 0%, 100%);
     grid-template-areas: "div1 div1 div2 div5"
     "div1 div1 div2 div5"
     "div3 div4 div4 div5"
@@ -34,27 +33,98 @@ body{
 }
 
 .div1{
-    background-color: blueviolet;
+    background-color: hsl(263, 55%, 52%);
     border-radius: 10px;
     grid-area: div1;
+    padding: 0 30px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
 }
 .div2{
-    background-color: rgb(110, 106, 106);
+    background-color: hsl(217, 19%, 35%);
     border-radius: 10px;
     grid-area: div2;
+    padding: 10px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
 }
 .div3{
-    background-color: beige;
+    background-color: hsl(0, 0%, 100%);
     border-radius: 10px;
     grid-area: div3;
+    padding: 10px;
+    color: #212529;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
 }
 .div4{
-    background-color: gray;
+    background-color: hsl(219, 29%, 14%);
     border-radius: 10px;
     grid-area: div4;
+    padding: 10px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
 }
 .div5{
-    background-color: whitesmoke;
+    background-color: hsl(0, 0%, 100%);
     border-radius: 10px;
     grid-area: div5;
+    padding: 10px;
+    color: #212529;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+}
+
+.header{
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    padding-top: 20px;
+}
+.header20,.header20-1{
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: 10% 1fr;
+}
+.header20-1::after{
+    content: url(../images/bg-pattern-quotation.svg);
+    position: absolute;
+    top: 117px;
+    right: 55%;
+    z-index: 1;
+    height: 100px;
+    transform: scale(105%);
+}
+
+.image img{
+    border-radius: 50%;
+    height: 40%;
+}
+.desc{
+    font-size: 10px;
+    text-transform: uppercase;
+}
+h4{
+    font-weight: 600;
+}
+.body{
+    font-size: 14px;
+    font-weight: 600;
+    z-index: 2;
+}
+.metier{
+    font-weight: 500;
+    opacity: 50%;
+    line-height: 1.5;
+}
+.footer{
+    font-weight: 500;
+    opacity: 70%;
+    line-height: 1.5;
+    padding: 10px;
+    font-size: 11px;
 }
